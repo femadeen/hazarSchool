@@ -1,0 +1,23 @@
+﻿@model HazarSchool.ViewModels.ResponseModels.StudentResponseViewModels.StudentResponseModel
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+
+<div>
+	<p>
+		The detail of the Student is shown below;
+	</p>
+	<p>First Name: @Model.Data.FirstName</p>
+	<p>Last Name: @Model.Data.LastName</p>
+	<p>Student Age: @Model.Data.Age</p>
+	<p>Student email: @Model.Data.Email</p>
+	<p>Student Department @Model.Data.DepartmentName</p>
+	<p>The following are the courses offered by the Student </p>
+	@foreach(var course in Model.Data.Courses)
+	{
+		<p>courses : @course.Name</p>
+		
+	}
+	<a asp-action="Index">Go back to index </a>
+</div>

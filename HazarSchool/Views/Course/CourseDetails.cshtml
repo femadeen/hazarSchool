@@ -1,0 +1,17 @@
+﻿@model HazarSchool.ViewModels.ResponseModels.CourseResponseViewModels.CourseResponseModel
+<div>
+	<p>
+		The detail of the course is shown below;
+	</p>
+	<p>@Model.Data.Name</p>
+	@foreach(var student in Model.Data.Students)
+	{
+		<p>@student.FullName</p>
+		<p>@student.Age</p>
+		<p>@student.Email</p>
+		<p>@student.DepartmentName</p>
+
+	}
+
+	<a asp-action="Index">Go back to index </a>
+</div>
